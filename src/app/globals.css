@@ -82,11 +82,21 @@
     }
 
     .menu-item {
-      @apply border rounded-md py-2 px-4 bg-white text-sm text-zinc-900 hover:shadow hover:border-gray-300 truncate;
+      @apply rounded-md py-2 px-4 text-sm w-full items-center gap-2
+      text-zinc-900 hover:border-l-zinc-400 truncate flex hover:bg-gray-100/90;
+
+      &::before {
+        content: '';
+        @apply w-2 h-9 rounded-full block bg-transparent;
+      }
+
+      &:hover::before {
+        @apply bg-zinc-400;
+      }
     }
 
     .active-menu-item {
-      @apply !bg-blue-700 !text-white;
+      @apply !border-l-blue-700;
     }
     
   }

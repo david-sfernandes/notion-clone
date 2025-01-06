@@ -24,7 +24,7 @@ export default function LiveCursorProvider({
   }
 
   return (
-    <div onPointerMove={handlePointerMove} onPointerLeave={handlePointerLeave}>
+    <div className="w-full h-full overflow-x-hidden" onPointerMove={handlePointerMove} onPointerLeave={handlePointerLeave}>
       {children}
       {others
         .filter((other) => other.presence.cursor !== null)

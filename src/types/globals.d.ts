@@ -1,10 +1,5 @@
-type User = {
-  firstName: string;
-  lastName: string;
-  fullName: string;
-  email: string;
-  image: string;
-};
+import { User } from "./types";
+
 
 declare global {
   interface CustomJwtSessionClaims extends User {}

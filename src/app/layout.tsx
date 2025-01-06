@@ -3,6 +3,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,12 +20,13 @@ export default function RootLayout({
       <html lang="pt-BR">
         <body>
           <Header />
-          <div className="flex min-h-screen">
+          <div className="flex min-h-screen overflow-x-hidden w-full relative">
             <Sidebar />
             <main className="flex-1 p-1 bg-gray-100 overflow-y-auto">
               {children}
             </main>
           </div>
+          <Toaster position="bottom-center" />
         </body>
       </html>
     </ClerkProvider>

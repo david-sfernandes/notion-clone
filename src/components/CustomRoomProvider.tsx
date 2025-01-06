@@ -1,3 +1,4 @@
+"use client";
 import { ClientSideSuspense, RoomProvider } from "@liveblocks/react";
 import { PropsWithChildren } from "react";
 import LiveCursorProvider from "./LiveCursorProvider";
@@ -12,12 +13,7 @@ export default function CustomRoomProvider({
   roomId,
 }: CustomRoomProviderProps) {
   return (
-    <RoomProvider
-      id={roomId}
-      initialPresence={{
-        cursor: null,
-      }}
-    >
+    <RoomProvider id={roomId} initialPresence={{ cursor: null }}>
       <ClientSideSuspense fallback={<Loading />}>
         <LiveCursorProvider>{children}</LiveCursorProvider>
       </ClientSideSuspense>

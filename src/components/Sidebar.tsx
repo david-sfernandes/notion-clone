@@ -88,7 +88,7 @@ export default function Sidebar() {
   );
 
   return (
-    <aside className="flex w-fit md:w-64 h-screen p-2 md:p-5 bg-gray-50 relative text-gray-400 border-r">
+    <aside className="flex w-fit md:w-64 h-screen pb-2 bg-gray-50 relative text-gray-400 border-r">
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger>
@@ -97,13 +97,13 @@ export default function Sidebar() {
           <SheetContent side="left">
             <SheetHeader>
               <SheetTitle>Menu</SheetTitle>
-              <div>{/* Options */}</div>
+              <div>{menuOptions}</div>
             </SheetHeader>
           </SheetContent>
         </Sheet>
       </div>
 
-      <div className="hidden md:block">{menuOptions}</div>
+      <div className="hidden md:block p-1 w-full">{menuOptions}</div>
     </aside>
   );
 }
