@@ -88,7 +88,7 @@ export default function Sidebar() {
   );
 
   return (
-    <aside className="flex w-fit md:w-64 h-screen pb-2 bg-gray-50 relative text-gray-400 border-r">
+    <aside className="flex w-fit md:w-64 h-screen p-1 pb-2 bg-slate-50 relative text-gray-400s">
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger>

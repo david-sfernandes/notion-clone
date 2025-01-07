@@ -13,6 +13,7 @@ import { FormEvent, useState, useTransition } from "react";
 import { toast } from "sonner";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { Share2Icon } from "lucide-react";
 
 export default function InviteUser({ id }: { id: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +39,10 @@ export default function InviteUser({ id }: { id: string }) {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger>
-        <Button variant="outline">Convite</Button>
+        <Button variant="outline">
+          <Share2Icon />
+          Compartilhar
+        </Button>
       </DialogTrigger>
 
       <DialogContent>

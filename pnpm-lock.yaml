@@ -71,6 +71,9 @@ importers:
       next-themes:
         specifier: ^0.4.4
         version: 0.4.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      notion-clone:
+        specifier: 'file:'
+        version: file:(@opentelemetry/api@1.9.0)(@tiptap/pm@2.11.0)(@types/hast@3.0.4)(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(tailwindcss@3.4.17)
       react:
         specifier: ^18
         version: 18.3.1
@@ -2212,6 +2215,9 @@ packages:
   normalize-range@0.1.2:
     resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
     engines: {node: '>=0.10.0'}
+
+  'notion-clone@file:':
+    resolution: {directory: '', type: directory}
 
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
@@ -5687,6 +5693,58 @@ snapshots:
   normalize-path@3.0.0: {}
 
   normalize-range@0.1.2: {}
+
+  notion-clone@file:(@opentelemetry/api@1.9.0)(@tiptap/pm@2.11.0)(@types/hast@3.0.4)(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(tailwindcss@3.4.17):
+    dependencies:
+      '@blocknote/core': 0.22.0(@types/hast@3.0.4)
+      '@blocknote/mantine': 0.22.0(@tiptap/pm@2.11.0)(@types/hast@3.0.4)(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@blocknote/react': 0.22.0(@tiptap/pm@2.11.0)(@types/hast@3.0.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@blocknote/shadcn': 0.22.0(@tiptap/pm@2.11.0)(@types/hast@3.0.4)(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@clerk/nextjs': 6.9.6(next@14.2.22(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@liveblocks/client': 2.15.1
+      '@liveblocks/node': 2.15.1
+      '@liveblocks/react': 2.15.1(react@18.3.1)
+      '@liveblocks/yjs': 2.15.1(yjs@13.6.21)
+      '@radix-ui/react-avatar': 1.1.2(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-dialog': 1.1.4(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-slot': 1.1.1(@types/react@18.3.18)(react@18.3.1)
+      '@radix-ui/react-tooltip': 1.1.6(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      class-variance-authority: 0.7.1
+      clsx: 2.1.1
+      firebase: 11.1.0
+      firebase-admin: 13.0.2
+      lucide-react: 0.469.0(react@18.3.1)
+      motion: 11.15.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.2.22(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next-themes: 0.4.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-firebase-hooks: 5.1.1(firebase@11.1.0)(react@18.3.1)
+      sonner: 1.7.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      tailwind-merge: 2.6.0
+      tailwindcss-animate: 1.0.7(tailwindcss@3.4.17)
+      vaul: 1.1.2(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      yjs: 13.6.21
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@emotion/is-prop-valid'
+      - '@opentelemetry/api'
+      - '@playwright/test'
+      - '@react-native-async-storage/async-storage'
+      - '@tiptap/pm'
+      - '@types/hast'
+      - '@types/react'
+      - '@types/react-dom'
+      - babel-plugin-macros
+      - encoding
+      - highlight.js
+      - lowlight
+      - refractor
+      - sass
+      - sugar-high
+      - supports-color
+      - tailwindcss
+      - ts-node
 
   object-assign@4.1.1: {}
 

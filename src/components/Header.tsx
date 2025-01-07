@@ -10,20 +10,18 @@ import Breadcrumbs from "./Breadcrumbs";
 
 export default function Header() {
   const { user } = useUser();
+  user?.firstName
 
   return (
-    <header className="flex justify-between items-center p-4 border-b">
-      {user && (
-        <h1 className="text-xl font-semibold">
-          {user?.firstName}
-          {"'s"} Space
-        </h1>
-      )}
-      {!user && <h1>Notion Clone</h1>}
+    <header className="flex justify-between items-center p-2 bg-slate-50">
+      <h1 className="font-semibold">My Notes</h1>
 
       <Breadcrumbs />
 
-      <div>
+      <div className="flex items-center gap-2">
+        {user && (
+          <p className="text-sm font-medium text-zinc-700">Olá {user?.firstName}</p>
+        )}
         <SignedOut>
           <SignInButton />
         </SignedOut>

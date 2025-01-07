@@ -13,6 +13,7 @@ import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { deleteDocument } from "@/actions/actions";
 import { toast } from "sonner";
+import { TrashIcon } from "lucide-react";
 
 export default function DeleteDocumentButton({ id }: { id: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,9 @@ export default function DeleteDocumentButton({ id }: { id: string }) {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger>
-        <Button className="bg-red-500 text-white">Deletar</Button>
+        <Button className="bg-red-500 text-white hover:bg-red-600">
+          <TrashIcon />
+        </Button>
       </DialogTrigger>
 
       <DialogContent>

@@ -40,7 +40,7 @@ export default function Editor() {
 
   return (
     <div className="w-full">
-      <div className="flex justify-end items-center gap-2 mb-4">
+      {/* <div className="flex justify-end items-center gap-2 mb-4">
         <Button className={style} onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? (
             <SunIcon className="size-5" />
@@ -48,7 +48,7 @@ export default function Editor() {
             <MoonIcon className="size-5" />
           )}
         </Button>
-      </div>
+      </div> */}
 
       <BlockNote doc={doc} provider={provider} darkMode={darkMode} />
     </div>

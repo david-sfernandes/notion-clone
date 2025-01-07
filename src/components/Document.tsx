@@ -36,20 +36,27 @@ export default function Document({ id }: { id: string }) {
   return (
     <section className="flex flex-col flex-1 *:w-full max-w-4xl mx-auto p-2 min-h-screen items-start space-y-2 bg-white rounded">
       <form className="flex items-center space-x-2" onSubmit={updateTitle}>
-        <Input value={input} onChange={(e) => setInput(e.target.value)} />
-        <Button disabled={isUpdating} type="submit">
+        <Input
+          className="!font-medium !text-lg !ring-0 border-0 border-b rounded-none
+          focus:!ring-0 focus:border-b-blue-600"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <Button disabled={isUpdating} type="submit" className="custom-btn">
           Update
         </Button>
+        {isOwner && (
+          <DeleteDocumentButton id={id} />
+        )}
       </form>
 
-      <div>
-        {isOwner && (
-          <>
+      <div className="flex justify-between">
+        {isOwner ? (
+          <div className="flex gap-2">
             <InviteUser id={id} />
-            <DeleteDocumentButton id={id} />
             <ManageUsers id={id} />
-          </>
-        )}
+          </div>
+        ) : <div />}
         <Avatars />
       </div>
 

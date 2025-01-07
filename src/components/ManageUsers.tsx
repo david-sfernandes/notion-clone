@@ -16,6 +16,7 @@ import { collectionGroup, query, where } from "firebase/firestore";
 import { db } from "../../firebase";
 import { toast } from "sonner";
 import { removeUserFromDocument } from "@/actions/actions";
+import { Users2Icon } from "lucide-react";
 
 export default function ManageUsers({ id }: { id: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,10 @@ export default function ManageUsers({ id }: { id: string }) {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger>
-        <Button variant="outline">Usuários</Button>
+        <Button variant="outline">
+          <Users2Icon />
+          Membros
+        </Button>
       </DialogTrigger>
 
       <DialogContent>

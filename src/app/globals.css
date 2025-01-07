@@ -74,20 +74,24 @@
 }
 
 @layer components {
+  .custom-btn {
+    @apply !bg-zinc-800/95 hover:!bg-zinc-700/90;
+  }
+
   .doc-menu-list {
     @apply flex flex-col space-y-2;
 
     h3, p {
-      @apply mt-2;
+      @apply mt-3 text-sm text-zinc-500;
     }
 
     .menu-item {
-      @apply rounded-md py-2 px-4 text-sm w-full items-center gap-2
+      @apply rounded-md text-sm w-full items-center gap-2 p-[1px]
       text-zinc-900 hover:border-l-zinc-400 truncate flex hover:bg-gray-100/90;
 
       &::before {
         content: '';
-        @apply w-2 h-9 rounded-full block bg-transparent;
+        @apply w-1 h-9 rounded-full block bg-transparent;
       }
 
       &:hover::before {
@@ -95,8 +99,8 @@
       }
     }
 
-    .active-menu-item {
-      @apply !border-l-blue-700;
+    .active-menu-item::before {
+      @apply !bg-blue-700;
     }
     
   }
