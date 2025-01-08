@@ -17,7 +17,7 @@ export default function Avatars() {
 
   return (
     <div className="flex items-center gap-2">
-      <p className="text-sm text-zinc-500">Usuários editando</p>
+      <p className="text-sm text-zinc-500 hidden sm:block">Usuários editando</p>
       <div className="flex items-center -space-x-3">
         {all.map((user, i) => (
           <TooltipProvider key={`tt-${i}`}>

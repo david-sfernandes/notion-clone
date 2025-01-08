@@ -1,7 +1,6 @@
-export type User = {
-  firstName: string;
-  lastName: string;
-  fullName: string;
-  email: string;
-  image: string;
-};
+interface RoomDocument extends DocumentData {
+  userId: string;
+  role: string;
+  createdAt: Date;
+  roomId: string;
+}
